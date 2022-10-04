@@ -1,0 +1,30 @@
+{
+  "name": "login-register-nodejs-mysql",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nasadmi/Login-Register-NodeJS-MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nasadmi/Login-Register-NodeJS-MySQL/issues"
+  },
+  "homepage": "https://github.com/Nasadmi/Login-Register-NodeJS-MySQL#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
