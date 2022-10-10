@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/links') %>
+    <link rel="stylesheet" href="/css/contacts.css">
+</head>
+<body>
+    <input type="hidden" value="<%= user %>" id="account_JS">
+    <div class="container">
+        <nav class="principal element-center">
+            <ul class="nav-menu">
+                <li>
+                    <a href="/profile/<%= user %>">Profile</a>
+                </li>
+                <li>
+                    <a href="/profile/<%= user %>/contacts">Your Contacts</a>
+                </li>
+                <li>    
+                    <a class="pointer" onclick="logout()">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="principal element-center">
+            <ul class="nav-menu">
+                <li>
+                    <a href="/profile/<%= user %>/contacts/add">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="indicator">
+            <h1>Don't you have Contacts?</h1>
+            <a href="/profile/<%= user %>/contacts/add">Add Here</a>
+        </div>
+        <div class="element-center expansion grid_2">
+            <% for(var i = 0; i < data.length; i++) { %>
+                <div class="minicard element-center">
+                    <h1><%= data[i].name %></h1>
+                    <h2 ><%= data[i].email %></h2>
+                    <h2 ><%= data[i].number %></h2>
+                    <input type="hidden" value="<%= data[i].name %>" class="name_contact-JS">
+                    <input type="hidden" class="id_contact-JS" value="<%= data[i].id %>">
+                        <ul class="options">
+                            <li>
+                                <a class="delete pointer" onclick="del()">
+                                    <i class="fa-solid fa-eraser"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/profile/<%= user %>/contacts/edit/<%= data[i].name %>/<%= data[i].id %>" class="edit">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            <% } %>
+        </div> 
+    </div>
+    <%- include('partials/scripts') %>
+    <script src="/js/alert.js"></script>
+    <script src="/js/counter.js"></script>
+</body>
+</html>

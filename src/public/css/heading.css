@@ -1,0 +1,38 @@
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+header.title {
+    font-size: 2em;
+    color: var(--White-Color);
+    text-shadow: 0px 0px 15px var(--Yellow-Color);
+}
+
+.principal {
+    margin-top: 30px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0px 15px;
+}
+
+.nav-menu li a {
+    font-size: 1.5em;
+    font-family: var(--Montaserrat-Font);
+    color: var(--White-Color);
+    border-bottom: 3px solid var(--Yellow-Color);
+    padding: 5px 0px;
+    transition: 0.5s ease-in-out;
+    letter-spacing: -1px;
+    font-weight: 500;
+}
+
+.nav-menu li a:hover {
+    padding: 5px 10px;
+}

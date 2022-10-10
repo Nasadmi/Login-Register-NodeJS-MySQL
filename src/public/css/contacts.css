@@ -1,0 +1,80 @@
+.indicator {
+    margin: 10% auto 0 auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: var(--White-Color);
+    border-radius: 12px;
+    height: 30vh;
+    width: 50vw;
+    text-align: center;
+}
+
+.indicator h1 {
+    margin: 30px 0px;
+}
+
+.indicator a {
+    font-size: 2em;
+    color: var(--Yellow-Color);
+    border-bottom: 3px solid var(--White-Color);
+    font-weight: bold;
+}
+
+.expansion {
+    width: 90vw;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.minicard {
+    padding: 10px;
+    width: 25vw;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 12px;
+    color: var(--White-Color);
+    box-shadow: -20px -20px 30px var(--Yellow-Color);
+    transition: all .5s ease;
+}
+
+.minicard h2 {
+    margin: 5px auto;
+}
+
+.options {
+    display: flex;
+}
+
+.options > li {
+    margin: 0px 90px;
+}
+
+.options > li > a {
+    padding: 5px 10px;
+    background-color: var(--Grey_Light-Color);
+    border-radius: 12px;
+}
+
+a.delete {
+    color: rgb(250, 30, 0);
+    transition: all .5s ease-in-out;
+}
+
+a.edit {
+    color: rgb(0, 150, 250);
+    transition: all .5s ease-in-out;
+}
+
+a.delete:hover {
+    background-color: rgb(250, 30, 0);
+    color: var(--Grey_Light-Color);
+}
+
+a.edit:hover {
+    background-color: rgb(0, 150, 250);
+    color: var(--Grey_Light-Color);
+}
+
+.minicard:hover {
+    box-shadow: 20px 20px 30px var(--White-Color);
+}

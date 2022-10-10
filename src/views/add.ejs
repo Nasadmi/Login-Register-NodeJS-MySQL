@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/links') %>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="principal element-center">
+            <ul class="nav-menu">
+                <li>
+                    <a href="/profile/<%= user %>">Profile</a>
+                </li>
+                <li>
+                    <a href="/profile/<%= user %>/contacts">Your Contacts</a>
+                </li>
+                <li>    
+                    <a class="pointer" id="logout">Log Out</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <form action="/contact/<%= user %>/add" method="POST">
+                <div class="grid_2">
+                    <label for="username">
+                        <h2>Name</h2>
+                        <input type="text" name="name" id="username" spellcheck="false" autocomplete="on" required>
+                    </label>
+                    <label for="email">
+                        <h2>Email</h2>
+                        <input type="email" name="email" id="email" spellcheck="false" autocomplete="off" required>
+                    </label>
+                </div>
+                <div class="element-center top">
+                    <label for="number">
+                        <h2>Number</h2>
+                        <input type="text" name="number" id="number" spellcheck="false" autocomplete="off" required>
+                    </label>
+                </div>
+                <div class="element-center">
+                    <button class="btn-form">
+                        Add Contact
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include('partials/scripts') %>
+    <% if(alert == true) { %>
+        <script>
+            Swal.fire(
+                {
+                    title: '<%= alertTitle %>',
+                    text: '<%= alertMessage %>',
+                    icon: '<%= alertIcon %>',
+                    background: 'var(--Grey_Dark-Color)',
+                    color: 'var(--White-Color)',
+                    showConfirmButton: <%= showConfirmButton %>,
+                    timer: <%= timer  %>,
+                }
+            ).then(() => {
+                window.location = '<%= route %>'
+            })
+        </script>
+    <% } %>
+</body>
+</html>

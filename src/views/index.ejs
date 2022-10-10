@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/links') %>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <%- include('partials/heading') %>
+        <div class="content">
+            <div class="flex">
+                <a href="/register" class="a-card">
+                    <div class="card">
+                        <h1>Register</h1>
+                    </div>
+                </a>
+                <a href="/login" class="a-card">
+                    <div class="card">
+                        <h1>Login</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <%- include('partials/scripts') %>
+</body>
+</html>

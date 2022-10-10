@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('partials/links') %>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+<body>
+    <div class="container">
+        <input type="hidden" value="<%= user[0].username %>" id="account_JS">
+        <nav class="principal element-center">
+            <ul class="nav-menu">
+                <li>
+                    <a href="/profile/<%= user[0].username %>">Profile</a>
+                </li>
+                <li>
+                    <a href="/profile/<%= user[0].username %>/contacts">Your Contacts</a>
+                </li>
+                <li>    
+                    <a class="pointer" id="logout">Log Out</a>
+                </li>
+            </ul>
+        </nav> 
+    </div>
+    <%- include('partials/scripts') %>
+    <script src="/js/logout.js"></script>
+</body>
+</html>
