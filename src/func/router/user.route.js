@@ -4,7 +4,7 @@ const router = express.Router();
 
 const {pool} = require('../db/db.js');
 
-const title = 'AccountJS'
+const title = 'ContactJS'
 
 router.get('/login', (req, res) => {
     res.render('login', {

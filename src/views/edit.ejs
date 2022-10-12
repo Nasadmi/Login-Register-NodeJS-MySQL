@@ -25,6 +25,7 @@
                 </li>
             </ul>
         </nav> 
+        <input type="hidden" value="<%= user %>" id="account_JS">
         <div class="content">
             <form action="/contacts/<%= user %>/update/<%= data[0].name %>/<%= data[0].id %>" method="POST">
                 <div class="grid_2">
@@ -52,6 +53,7 @@
         </div>
     </div>
     <%- include('partials/scripts') %>
+    <script src="/js/logout.js"></script>
     <script src="/js/alert.js"></script>
     <% if(alert == true) { %>
         <script>

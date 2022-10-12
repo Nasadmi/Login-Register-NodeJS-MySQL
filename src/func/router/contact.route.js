@@ -4,7 +4,7 @@ const {pool} = require('../db/db.js')
 
 const router = express.Router();
 
-const title = 'AccountJS';
+const title = 'ContactJS';
 
 router.get('/profile/:username/contacts/add', (req,res) => {
     let username = req.params.username;
